@@ -1,0 +1,125 @@
+﻿/* --電腦版型------------------------------------- */
+
+
+
+#TOP-MENU{
+	display:none;
+}
+
+#TOP-MENU #BTN{}
+
+#NAV{
+	width:100%;
+	max-width:970px;
+	height:50px;
+	margin:0 auto;
+	background-color:#C60;
+/*	background-image:url(images/nav_bg.jpg);
+	background-repeat:repeat-x;
+	margin-bottom: 20px;
+	margin-top:-10px;*/
+}
+
+#NAV ul{
+	width: 970px;
+	height: 50px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#NAV li{
+	float:left;
+	margin-left:3px;
+}
+
+#NAV li a{
+/*	background-image:url(images/navi_btn.png);*/
+	display: block;
+	width: 120px;
+	line-height: 50px;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	font-family: "微軟正黑體", Arial;
+	font-size:1em;
+	font-weight: 600;
+}
+
+#NAV li a:hover{
+	color:#F4C91D;
+}
+
+
+
+
+/* --手機版型------------------------------------- */
+
+@media screen and (max-width: 900px) {
+	
+	*{
+		box-sizing:border-box; /* 讓 padding 與 width 解除關係 */
+	}
+	
+	html,body{
+		-webkit-text-size-adjust:none; /* iPhone 旋轉後 文字不要放大 */
+	}
+
+#TOP-MENU{
+	background-color:#c60;
+	background-image:url(images/nav_bg_mobile.jpg);
+	background-repeat:repeat-x;
+	display:block;
+	width:100%;
+	height:40px;
+	position:relative; /* 外層相對 */
+	margin-top:-5px;
+}
+	
+#TOP-MENU #BTN{  /* 製作手機版 右上角的按鈕 */
+	display:block;
+	width:60px;
+	height:40px;
+	background-image:url(images/nav_btn_mobile.jpg);
+	position:absolute;  /* 子層絕對 */
+	right:5px;
+	top:0px;
+	text-indent:-9999px;
+}
+		
+	#NAV{
+	width: 100%;
+	height: auto; /* 高度自動 */
+	background-color: #e3e2e2;
+	display: none;  /* 把主選單先關掉 */
+	}
+	
+	#NAV ul{
+		/*margin-top: -258px;*/
+		width:100%;
+		height:auto; /* 高度自動 */
+	}
+	
+	#NAV li{
+	width: 50%;
+	float: left; /* 取消 float */
+	}
+	
+	#NAV li a{
+	display: block;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	text-decoration: none;
+	background-color: rgba(0,0,0,0.7);
+	border: 1px solid #FFF;
+	color: #FFF;
+	}
+	
+	#NAV li a:hover{
+		background-color:#FFF;
+		border:1px solid #FFF;
+	}
+	
+	
+}
